@@ -4,7 +4,7 @@ import {fetchDataFromApi} from "./utils/api";
 import { useSelector, useDispatch } from 'react-redux';
 import { getApiConfiguration } from './store/homeSlice';
 import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
+import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Details from "./pages/details/Details";
 import SearchResult from "./pages/searchResult/SearchResult";
@@ -19,14 +19,20 @@ function App() {
     console.log(url);
 
     useEffect(()=> {
-        apiTesting()
+        fetchApiConfig()
     }, []);
 
-    const apiTesting = () => {
-        fetchDataFromApi('/movie/popular')
+    const fetchApiConfig = () => {
+        fetchDataFromApi('/configuration')
             .then((res) => {
                 console.log(res);
-                dispatch(getApiConfiguration(res));
+
+                const url = {
+                    backdrop: res.images.secure_base_url + "original", 
+                    poster: res.images.secure_base_url + "original", 
+                    profile: res.images.secure_base_url + "original", 
+                }
+                dispatch(getApiConfiguration(url));
             });
     }
 
@@ -36,11 +42,11 @@ function App() {
         <Routes>    
             <Route path='/' element={<Home/>}/>
             <Route path='/.mediaType/:id' element={<Details/>} />;
-            <Route path='/serach/:quqry' element={<SearchResult/>} />;
+            <Route path='/search/:quqry' element={<SearchResult/>} />;
             <Route path='/expore/:mediaType' element={<Explore/>} />;
             <Route path='*' element={<pageNotFound/>} />;
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
     </BrowserRouter>);
 }
 
