@@ -46,7 +46,7 @@ function App() {
             <Route path='/expore/:mediaType' element={<Explore/>} />;
             <Route path='*' element={<pageNotFound/>} />;
         </Routes>
-        {/* <Footer/> */}
+        <Footer/>
     </BrowserRouter>);
 }
 
