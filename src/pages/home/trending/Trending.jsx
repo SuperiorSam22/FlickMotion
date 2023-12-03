@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import ContentWrapper from '../../../components/contenetWrapper/ContentWrapper';
 import SwitchTabs from '../../../components/switchTabs/SwitchTabs';
 import useFetch from '../../../hooks/useFetch';
+import Carousel from '../../../components/carousel/Carousel';
+
 //we have to call api here too 
 
 
@@ -21,7 +23,7 @@ const Trending = () => {
             
             
         </ContentWrapper>    
-        
+        <Carousel data={data?.results} loading = {loading} />
     </div>
   )
 }
