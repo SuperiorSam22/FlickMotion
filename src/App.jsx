@@ -9,7 +9,8 @@ import Home from "./pages/home/Home";
 import Details from "./pages/details/Details";
 import SearchResult from "./pages/searchResult/SearchResult";
 import Explore from "./pages/explore/Explore";
-import pageNotFound from './pages/404/pageNotFound';
+import PageNotFound from './pages/404/pageNotFound';
+
 
 
 function App() {
@@ -63,7 +64,7 @@ function App() {
             <Route path='/.mediaType/:id' element={<Details/>} />;
             <Route path='/search/:quqry' element={<SearchResult/>} />;
             <Route path='/expore/:mediaType' element={<Explore/>} />;
-            <Route path='*' element={<pageNotFound/>} />;
+            <Route path='*' element={<PageNotFound/>} />;
         </Routes>
         <Footer/>
     </BrowserRouter>);
