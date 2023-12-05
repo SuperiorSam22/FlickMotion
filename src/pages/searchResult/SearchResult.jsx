@@ -42,6 +42,7 @@ const SearchResult = () => {
     }
 
     useEffect(()=>{
+        setPageNum(1); //changed page number on change of query 
         fetchInitialData();
     },[query])
 
