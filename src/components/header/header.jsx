@@ -3,11 +3,11 @@ import { HiOutlineSearch } from "react-icons/hi";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
-
 import "./style.scss";
-
 import ContentWrapper from '../contenetWrapper/ContentWrapper'
 import logo from "../../assets/flickmotion.svg";
+
+
 
 const Header = () => {
     const [show, setShow] = useState("top");
@@ -75,7 +75,8 @@ const Header = () => {
     return (
         <header className={`header ${mobileMenu ? "mobileView":""} ${show}`}>
             <ContentWrapper>  
-              <div className="logo">
+              <div className="logo" onClick={()=> 
+                    navigate("/")}>
                   <img src={logo} alt="" />
               </div>
 
