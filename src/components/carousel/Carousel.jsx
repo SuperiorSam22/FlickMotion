@@ -69,7 +69,7 @@ const Carousel = ({data, loading, endpoint, title}) => {
                                     onClick={()=> navigate(`/${item.media_type || endpoint}/${item.id}`)}>
                                     <div className="posterBlock">
                                         <Img src={posterUrl}/>
-                                        <CircleRating rating={item.vote_average.toFixed(1)}/>
+                                        <CircleRating rating={item?.vote_average?.toFixed(1)}/>
 
                                         <Genres data={item.genre_ids.slice(0,2)}/>                                    
                                     </div>
@@ -77,10 +77,11 @@ const Carousel = ({data, loading, endpoint, title}) => {
                                         <span className="title">
                                             {item.title || item.name}
                                         </span>
+                                        
                                         <span className="date">
-                                            {dayjs(item.release_Date).
-                                            format("MMM D, YYYY"
-                                            )}
+                                            {dayjs(item.first_air_date || item.release_date).
+                                            format("MMM D, YYYY")
+                                            }
                                         </span>
                                         
                                     </div>
