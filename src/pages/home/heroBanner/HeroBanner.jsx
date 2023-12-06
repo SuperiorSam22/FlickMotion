@@ -28,6 +28,11 @@ const HeroBanner = () => {
         navigate(`/search/${query}`);
         }
     }
+    const searchQueryHandler1 = (event) => {
+        if(event.type === 'mousedown' && query.length > 0){
+        navigate(`/search/${query}`);
+        }
+    }
 
 
   return (
@@ -55,7 +60,7 @@ const HeroBanner = () => {
                         onKeyUp={searchQueryHandler}
                         onChange={(e)=> setQuery(e.target.value) }/> 
                         
-                        <button>Search</button>
+                        <button onMouseDown={searchQueryHandler1}>Search</button>
                 </div>
             </div>
             </ContentWrapper>
@@ -65,4 +70,4 @@ const HeroBanner = () => {
   );
 }
 
-export default HeroBanner
+export default HeroBanner;
