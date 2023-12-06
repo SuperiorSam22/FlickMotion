@@ -4,7 +4,7 @@ import {
     FaInstagram,
     FaTwitter,
     FaLinkedin,
-} from "react-icons/fa";
+} from "react-icons/fa/index";
 
 import ContentWrapper from "../contenetWrapper/ContentWrapper";
 
