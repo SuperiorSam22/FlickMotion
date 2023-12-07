@@ -14,16 +14,42 @@ import ContentWrapper from "../contenetWrapper/ContentWrapper";
 import "./style.scss";
 
 
+
+    const handleTermsOfUseClick = (linkType) => {
+        if(linkType === "termsOfUse"){
+            window.location.href = 'https://www.themoviedb.org/api-terms-of-use';
+        } else if( linkType === "priavcyPolicy"){
+            window.location.href = 'https://www.themoviedb.org/privacy-policy';
+        } else if( linkType === "about"){
+            window.location.href = "https://github.com/SuperiorSam22";
+        } else if( linkType === "faq"){
+            window.location.href = "https://www.themoviedb.org/faq/website";
+        } else if (linkType === "gitHub"){
+            window.location.href = "https://github.com/SuperiorSam22";
+        } else if (linkType === "linkedIn"){
+            window.location.href = "https://www.linkedin.com/in/sandeep-lal-03669b1b8";
+        } else if (linkType === "email"){
+            window.location.href = "mailto:sandeep221102@gmail.com";
+        } else if (linkType === "instagram"){
+            window.location.href = "https://www.instagram.com/sandeep2_211";
+        }
+    };
+
+
+
 const Footer = () => {
     return (
         <footer className="footer">
             <ContentWrapper>
                 <ul className="menuItems">
-                    <li className="menuItem">Terms Of Use</li>
-                    <li className="menuItem">Privacy-Policy</li>
-                    <li className="menuItem">About</li>
-                    <li className="menuItem">Blog</li>
-                    <li className="menuItem">FAQ</li>
+                    <li className="menuItem" 
+                        onClick={()=> handleTermsOfUseClick('termsOfUse')}>Terms Of Use</li>
+                    <li className="menuItem" 
+                        onClick={()=> handleTermsOfUseClick('priavcyPolicy')}>Privacy-Policy</li>
+                    <li className="menuItem" 
+                        onClick={()=> handleTermsOfUseClick('about')}>About</li>
+                    <li className="menuItem" 
+                        onClick={()=> handleTermsOfUseClick('faq')}>FAQ</li>
                 </ul>
                 <div className="infoText">
                 Welcome to our FlickMotion web application platform! Explore diverse genres effortlessly with our user-friendly interface. Seamlessly navigate trending, popular, and top-rated content on any device thanks to our fully responsive design and intuitive search bar.
@@ -33,28 +59,26 @@ const Footer = () => {
                 Start your journey today, and let the magic of movies and TV shows informations unfold at your fingertips.
                 </div>
                 <div className="socialIcons">
-                    <a href="https://github.com/SuperiorSam22">
-                        <span className="icon">
+                    <span className="icon" 
+                        onClick={()=> handleTermsOfUseClick('gitHub')}>
                         <FaGithub />
                     </span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sandeep-lal-03669b1b8">
-                        <span className="icon">
+
+                    <span className="icon"
+                        onClick={()=> handleTermsOfUseClick('linkedIn')} >
                         <FaLinkedin />
                     </span>
-                    </a>
-                    <a href="mailto:sandeep221102@gmail.com">
-                        <span className="icon">
+
+                    <span className="icon"
+                        onClick={()=> handleTermsOfUseClick('email')}>
                         <MdAlternateEmail />
                     </span>
-                    </a>
-                    <a href="https://www.instagram.com/sandeep2_211/">
-                    {/* use this for redirecting it to google's gmail 
-                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=your.email@example.com"></a> */}
-                        <span className="icon">
+
+                    <span className="icon"
+                        onClick={()=> handleTermsOfUseClick('instagram')}>
                         <FaInstagram />
                     </span>
-                    </a>
+                    
                 </div>
             </ContentWrapper>
         </footer>
