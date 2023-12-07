@@ -24,18 +24,12 @@ const HeroBanner = () => {
 
     //method for search input 
     const searchQueryHandler = (event) => {
-        if(event.key === 'Enter' && query.length > 0){
-        navigate(`/search/${query}`);
-        }
-    }
-    const searchQueryHandler1 = (event) => {
-        if(event.type === 'mousedown' && query.length > 0){
+        if(event.key === 'Enter' || event.type === 'mousedown' && query.length > 0){
         navigate(`/search/${query}`);
         }
     }
 
-
-  return (
+    return (
     <div className="heroBanner">
             {!loading && <div className="backdrop-img">
                 <Img src={background} />
@@ -60,7 +54,7 @@ const HeroBanner = () => {
                         onKeyUp={searchQueryHandler}
                         onChange={(e)=> setQuery(e.target.value) }/> 
                         
-                        <button onMouseDown={searchQueryHandler1}>Search</button>
+                        <button onMouseDown={searchQueryHandler}>Search</button>
                 </div>
             </div>
             </ContentWrapper>
