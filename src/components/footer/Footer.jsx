@@ -22,12 +22,11 @@ const Footer = () => {
                     <li className="menuItem">FAQ</li>
                 </ul>
                 <div className="infoText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                Welcome to our FlickMotion web application platform! Explore diverse genres effortlessly with our user-friendly interface. Seamlessly navigate trending, popular, and top-rated content on any device thanks to our fully responsive design and intuitive search bar.
+                Immerse yourself in an infinite stream of entertainment on the explore page, and dive deep into each title with comprehensive details, 
+                including cast information and trailers. 
+                Elevate your experience with our recommendation section, which tailors suggestions to your preferences. 
+                Start your journey today, and let the magic of movies and TV shows informations unfold at your fingertips.
                 </div>
                 <div className="socialIcons">
                     <span className="icon">
