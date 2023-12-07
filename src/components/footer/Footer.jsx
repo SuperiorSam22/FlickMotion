@@ -1,10 +1,13 @@
 import React from "react";
 import {
-    FaFacebookF,
+    FaGithub,
     FaInstagram,
-    FaTwitter,
+    FaVoicemail,
     FaLinkedin,
 } from "react-icons/fa/index";
+import {
+    MdAlternateEmail,
+} from "react-icons/md/index";
 
 import ContentWrapper from "../contenetWrapper/ContentWrapper";
 
@@ -30,16 +33,16 @@ const Footer = () => {
                 </div>
                 <div className="socialIcons">
                     <span className="icon">
-                        <FaFacebookF />
-                    </span>
-                    <span className="icon">
-                        <FaInstagram />
-                    </span>
-                    <span className="icon">
-                        <FaTwitter />
+                        <FaGithub />
                     </span>
                     <span className="icon">
                         <FaLinkedin />
+                    </span>
+                    <span className="icon">
+                        <MdAlternateEmail />
+                    </span>
+                    <span className="icon">
+                        <FaInstagram />
                     </span>
                 </div>
             </ContentWrapper>
