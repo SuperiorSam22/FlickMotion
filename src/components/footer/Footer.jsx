@@ -17,21 +17,21 @@ import "./style.scss";
 
     const handleTermsOfUseClick = (linkType) => {
         if(linkType === "termsOfUse"){
-            window.location.href = 'https://www.themoviedb.org/api-terms-of-use';
+            window.open('https://www.themoviedb.org/api-terms-of-use', '_blank');
         } else if( linkType === "priavcyPolicy"){
-            window.location.href = 'https://www.themoviedb.org/privacy-policy';
+            window.open('https://www.themoviedb.org/privacy-policy' ,'_blank');
         } else if( linkType === "about"){
-            window.location.href = "https://github.com/SuperiorSam22";
+            window.open('https://github.com/SuperiorSam22' ,'_blank');
         } else if( linkType === "faq"){
-            window.location.href = "https://www.themoviedb.org/faq/website";
+            window.open("https://www.themoviedb.org/faq/website" ,'_blank');
         } else if (linkType === "gitHub"){
-            window.location.href = "https://github.com/SuperiorSam22";
+            window.open( "https://github.com/SuperiorSam22" ,'_blank');
         } else if (linkType === "linkedIn"){
-            window.location.href = "https://www.linkedin.com/in/sandeep-lal-03669b1b8";
+            window.open("https://www.linkedin.com/in/sandeep-lal-03669b1b8" ,'_blank');
         } else if (linkType === "email"){
-            window.location.href = "mailto:sandeep221102@gmail.com";
+            window.open("mailto:sandeep221102@gmail.com" ,'_blank');
         } else if (linkType === "instagram"){
-            window.location.href = "https://www.instagram.com/sandeep2_211";
+            window.open("https://www.instagram.com/sandeep2_211" ,'_blank');
         }
     };
 
