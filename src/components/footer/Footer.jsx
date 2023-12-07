@@ -13,6 +13,7 @@ import ContentWrapper from "../contenetWrapper/ContentWrapper";
 
 import "./style.scss";
 
+
 const Footer = () => {
     return (
         <footer className="footer">
@@ -32,18 +33,28 @@ const Footer = () => {
                 Start your journey today, and let the magic of movies and TV shows informations unfold at your fingertips.
                 </div>
                 <div className="socialIcons">
-                    <span className="icon">
+                    <a href="https://github.com/SuperiorSam22">
+                        <span className="icon">
                         <FaGithub />
                     </span>
-                    <span className="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/sandeep-lal-03669b1b8">
+                        <span className="icon">
                         <FaLinkedin />
                     </span>
-                    <span className="icon">
+                    </a>
+                    <a href="mailto:sandeep221102@gmail.com">
+                        <span className="icon">
                         <MdAlternateEmail />
                     </span>
-                    <span className="icon">
+                    </a>
+                    <a href="https://www.instagram.com/sandeep2_211/">
+                    {/* use this for redirecting it to google's gmail 
+                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=your.email@example.com"></a> */}
+                        <span className="icon">
                         <FaInstagram />
                     </span>
+                    </a>
                 </div>
             </ContentWrapper>
         </footer>
