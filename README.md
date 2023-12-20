@@ -36,3 +36,5 @@ Utilize asynchronous API calls to efficiently gather and display detailed inform
 </ul>
 
 <h2>Getting started</h2>
+```bash
+git clone https://github.com/SuperiorSam22/FlickMotion.git
