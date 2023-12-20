@@ -2,7 +2,8 @@
 Welcome to Movie Explorer, a responsive web application developed using ReactJS that provides a comprehensive platform for exploring movies and TV shows. This project includes dynamic carousels, a user-friendly search bar, infinite scroll, and an Explore page with filter options. Read on to learn how to run the project in Visual Studio Code.
 
 <h2>Vist the project here - </h2>
-https://flickmotion.vercel.app/
+
+[FlickMotion](https://flickmotion.vercel.app/)
 
 <h2>Features</h2>
 
@@ -36,4 +37,24 @@ Utilize asynchronous API calls to efficiently gather and display detailed inform
 </ul>
 
 <h2>Getting started</h2>
+
+*Make sure you have node and npm installed*
+
+1. Clone the project using this command :
+
+```bash
+  git clone https://github.com/SuperiorSam22/FlickMotion.git
+```
+2. Install dependencies :
+```bash
+  npm install
+```
+3. Run the server :
+```bash
+  npm run dev
+```
+
+The project should run as local host in your web browser. 
+  
+
 
